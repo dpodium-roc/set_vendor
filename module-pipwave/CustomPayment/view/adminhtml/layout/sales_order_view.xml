@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="left">
+            <referenceBlock name="sales_order_tabs">
+                <referenceBlock name="order_tab_info">
+                    <referenceContainer name="order_additional_info">
+                        <block class="module-pipwave\CustomPayment\Block\Adminhtml\Order\View\Info" name="salesOrderCustomBlock" template="module-pipwave_CustomPayment::order/view/info.phtml">
+                        </block>
+                    </referenceContainer>
+                </referenceBlock>
+            </referenceBlock>
+        </referenceContainer>
+    </body>
+</page>

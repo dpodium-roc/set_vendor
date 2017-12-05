@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <payment>
+            <custompayment>
+                <payment_action>Authorization</payment_action>
+                <model>module-pipwave\CustomPayment\Model\PaymentMethod</model>
+                <active>0</active>
+                <is_gateway>1</is_gateway>
+                <api_key></api_key>
+                <api_secret></api_secret>
+                <test_mode>0</test_mode>
+                <!-- processing fee need modification -->
+                <processing_fee></processing_fee>
+                <title>Pipwave Payment</title>
+                <order_status>Pending</order_status>
+                <auto_invoice>1</auto_invoice>
+                <auto_shipping>0</auto_shipping>
+            </custompayment>
+        </payment>
+    </default>
+</config>

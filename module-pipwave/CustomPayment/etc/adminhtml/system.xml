@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation=
+        "urn:magento:module:Magento_module-config:etc/system_file.xsd">
+        <system>
+            <section id="payment">
+                <group id="custompayment" translate="label" sortOrder="1" 
+                    showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Pipwave Payment</label>
+                    <!-- create account -->
+                    <comment><![CDATA[<a href="https://merchant.pipwave.com/site/signup" target="_blank">Click here</a> to signup for a new account. It is quick and easy!<br>If you already have an account and wish to visit <a href="https://merchant.pipwave.com">pipwave</a>.]]></comment>
+
+                    <!-- enable/disable -->
+                    <field id="active" translate="label" sortOrder="1" 
+                        type="select" showInDefault="1" showInWebsite="1" 
+                        showInStore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\module-config\Model\Config\Source\Yesno</source_model>
+                        <comment>pipwave account is needed for this payment method.</comment>
+                    </field>
+
+                    <!-- API key-->
+                    <field id="api_key" translate="label" sortOrder="2"
+                        type="text" showInDefault="1" showInWebsite="1" 
+                        showInStore="1">
+                        <label>API key</label>
+                        <comment><![CDATA[<a href="https://merchant.pipwave.com/development-setting/index" target="_blank">API Key</a> provided by pipwave.]]></comment>
+                    </field>
+
+                    <!-- API secret-->
+                    <field id="api_secret" translate="label" 
+                    sortOrder="3" type="password" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>API secret</label>
+                        <comment><![CDATA[<a href="https://merchant.pipwave.com/development-setting/index" target="_blank">API Secret</a> provided by pipwave.]]></comment>
+                    </field>
+
+                    <!-- test mode -->
+                    <field id="test_mode" translate="label" sortOrder="4" 
+                        type="select" showInDefault="1" showInWebsite="1" 
+                        showInStore="1">
+                        <label>Test Mode</label>
+                        <source_model>Magento\module-config\Model\Config\Source\Yesno</source_model>
+                    </field>
+
+                    <field id="processing_fee" translate="label" sortOrder="5" type="text"
+                        showInDefault="1" showInWebsite="1" 
+                        showInStore="1">
+                        <label>Payment processing fee group</label>
+                        <comment><![CDATA[Enter reference ID here. Fee Group can be configured<a href="https://merchant.pipwave.com/account/set-processing-fee-group#general-processing-fee-group" target="_blank"> here</a>.]]></comment>
+                    </field>
+
+                    <field id="auto_invoice" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Auto invoice</label>
+                    <source_model>Magento\module-config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Invoice will be created automatically after buyer made payment. The default value should be yes.]]></comment>
+                    </field>
+
+                    <field id="auto_shipping" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Auto shipping</label>
+                    <source_model>Magento\module-config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Shipping will be created automatically after buyer made payment. Auto-invoice must be enabled for this to work. Only select this if you are certain that the product will be shipped to reduce conplexity when dealing with cancellation or refund.]]></comment>
+                    </field>
+                </group>
+            </section>
+        </system>
+</config>

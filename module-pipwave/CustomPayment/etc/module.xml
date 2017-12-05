@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noTestSchemaLocation=
+        "urn:magento:framework:Module/etc/module.xsd">
+        <module name="module-pipwave_CustomPayment" setup_version="2.3.0"
+        active="true" schema_version="2.3.0" >
+            <sequence>
+                <module name="Magento_module-sales"/>
+                <module name="Magento_module-payment"/>
+                <module name="Magento_module-checkout"/>
+                <module name="Magento_module-directory" />
+                <module name="Magento_module-config" />
+            </sequence>
+        </module>
+</config>
